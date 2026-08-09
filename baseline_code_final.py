@@ -325,7 +325,6 @@ def train_and_evaluate_gat(development_ds, test_ds, test_raw, pp, targets, devic
 def choose_internal_validation_split(df, fraction):
     return choose_split(df, fraction)
 
-
 def choose_split(df, fraction):
     cut = int(round((1 - fraction) * len(df)))
 

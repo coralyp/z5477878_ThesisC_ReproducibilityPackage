@@ -472,6 +472,7 @@ def run_numerical_sensitivity_analysis(model, train_raw, test_raw, pp, device, b
 
     return summary, ranking
 
+
 def choose_split(df, fraction):
     cut = int(round((1 - fraction) * len(df)))
     return df.iloc[:cut].reset_index(drop=True), df.iloc[cut:].reset_index(drop=True)
