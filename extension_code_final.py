@@ -469,13 +469,12 @@ def run_numerical_sensitivity_analysis(model, train_raw, test_raw, pp, device, b
     summary.to_csv(d / 'percentage_perturbation_summary_by_material.csv', index=False)
     ranking.to_csv(d / 'percentage_perturbation_input_rankings_by_material.csv', index=False)
 
-
     return summary, ranking
+
 
 def choose_split(df, fraction):
     cut = int(round((1 - fraction) * len(df)))
     return df.iloc[:cut].reset_index(drop=True), df.iloc[cut:].reset_index(drop=True)
-
 
 def choose_internal_validation_split(df, fraction):
     return choose_split(df, fraction)
